@@ -41,6 +41,7 @@ class ImageFlowTrainer(pl.LightningModule):
         
         # Save hyperparameters
         self.save_hyperparameters(ignore=['model'])
+        
     def _log_images(self, tag, images, global_step=None):
         """통합된 이미지 로깅 함수"""
         if global_step is None:
